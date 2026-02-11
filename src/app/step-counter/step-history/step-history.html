@@ -1,1 +1,6 @@
-<p>step-history works!</p>
+<p>Steps History</p>
+<ul>
+@for (step of stepHistorySignal(); track $index) {
+    <li>{{ step }} Step</li>
+}
+</ul>

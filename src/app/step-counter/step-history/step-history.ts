@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-step-history',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './step-history.css',
 })
 export class StepHistory {
-
+stepHistorySignal=input<number[]>();
 }

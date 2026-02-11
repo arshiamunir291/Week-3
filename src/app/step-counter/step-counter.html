@@ -1,1 +1,20 @@
-<p>step-counter works!</p>
+<div>
+    <header>
+        <p>Step Tracker</p>
+    </header>
+    <div>
+        <p>{{ stepCounter() }} {{ stepCounter() !==1 && stepCounter()!==0?'Steps':'Step'}}</p>
+        <p [stepHighlight]="stepCounter"></p>
+    </div>
+</div>
+<div>
+    <app-step-controls
+     [stepCounterSignal]="stepCounter()"
+     (increaseSignal)="increaseCounter()"
+     (decreaseSignal)="decreaseCounter()"
+     (resetSignal)="resetCounter()" 
+     (showHistorySignal)="toggleHistory()">
+    </app-step-controls>
+</div>
+
+<app-step-history *appToggle="showHistory()"   [stepHistorySignal]="stepHistory()"></app-step-history>
