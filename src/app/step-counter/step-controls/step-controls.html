@@ -1,6 +1,6 @@
-<button (click)="increaseSignal.emit()">Add step</button>
-<button (click)="decreaseSignal.emit()">Remove step</button>
-<button (click)="resetSignal.emit()">Reset Steps</button>
+<button (click)="increase.emit()">Add step</button>
+<button (click)="decrease.emit()">Remove step</button>
+<button (click)="reset.emit()">Reset Steps</button>
 <p>Daily Goal:{{ dailyGoal() }}</p>
 <div class="progress-container">
   <div
@@ -10,4 +10,4 @@
 </div>
 <p>{{ progressPercentage()| number:'1.0-0'}}% completed!</p>
 
-<button (click)="showHistorySignal.emit()">Show History</button>
+<button (click)="showHistory.emit()">Show History</button>

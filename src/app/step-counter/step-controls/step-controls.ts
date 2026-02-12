@@ -8,14 +8,14 @@ import { DecimalPipe } from '@angular/common';
   styleUrl: './step-controls.css',
 })
 export class StepControls {
-  stepCounterSignal = input<number>(0);
-  increaseSignal = output<void>();
-  decreaseSignal = output<void>();
-  resetSignal = output<void>();
-  showHistorySignal=output<void>();
+  stepCount = input<number>(0);
+  increase = output<void>();
+  decrease = output<void>();
+  reset = output<void>();
+  showHistory=output<void>();
   dailyGoal = signal(20);
   progressPercentage = computed(() => {
-    const percent = (this.stepCounterSignal() / this.dailyGoal()) * 100;
+    const percent = (this.stepCount() / this.dailyGoal()) * 100;
     return Math.min(percent, 100);
   })
 }
