@@ -1,6 +1,11 @@
-<p>Steps History</p>
-<ul>
+<div>
+    <p>Steps History</p>
+</div>
+<div class="step-history-list">
+    <ul>
 @for (step of stepHistorySignal(); track step) {
     <li>{{ step }} Step</li>
 }
 </ul>
+</div>
+

@@ -2,12 +2,12 @@
     <header>
         <p>Step Tracker</p>
     </header>
-    <div>
+    <div class="stepText">
         <p>{{ stepCounter()}} {{stepCounter() | stepInfo}}</p>
         <p [stepHighlight]="stepCounter"></p>
     </div>
 </div>
-<div>
+<div class="childComponent">
     <app-step-controls
      [stepCount]="stepCounter()"
      (increase)="increaseCounter()"

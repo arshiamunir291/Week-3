@@ -1,6 +1,7 @@
+
 .progress-container {
-  width: 10%;
-  height: 25px;
+  width: 30%;
+  height: 20px;
   background-color: #eee;
   border-radius: 20px;
   overflow: hidden;
@@ -9,6 +10,27 @@
 
 .progress-bar {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #41ebf78f;
   transition: width 0.3s ease-in-out;
+}
+button{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 1%;
+  margin: 1%;
+  background-color:transparent;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+}
+button:active{
+background-color: rgba(127, 255, 212, 0.568);
+transform: scale(0.95);
+}
+.progress-div{
+  display: flex;
+  justify-content: center;
+}
+p{
+  font-size: 16px;
+  font-weight: bold;
 }
