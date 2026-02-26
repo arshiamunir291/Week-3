@@ -18,11 +18,6 @@ export class StepCounter {
   stepHistory = computed(() =>
     Array.from({ length: this.stepCounter() }, (_, i) => i + 1)
   );
-  
-  stepLabel=computed(()=>{
-    const value=this.stepCounter();
-    return value ===1? 'Step':'Steps';
-  });
 
   increaseCounter() {
     this.stepCounter.update((c) => c + 1)

@@ -3,9 +3,8 @@
 </div>
 <div class="step-history-list">
     <ul>
-@for (step of stepHistorySignal(); track step) {
-    <li>{{ step }} Step</li>
-}
-</ul>
+        @for (step of stepHistorySignal(); track step) {
+        <li>{{ step }} {{ step | stepInfo }}</li>
+        }
+    </ul>
 </div>
-

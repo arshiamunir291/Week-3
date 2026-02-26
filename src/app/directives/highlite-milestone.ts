@@ -1,4 +1,4 @@
-import { computed, Directive, Signal, signal } from '@angular/core';
+import { computed, Directive, Signal, } from '@angular/core';
 
 @Directive({
   selector: '[stepHighlight]',
