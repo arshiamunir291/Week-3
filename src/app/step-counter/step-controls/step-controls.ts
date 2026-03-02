@@ -13,9 +13,10 @@ export class StepControls {
   decrease = output<void>();
   reset = output<void>();
   showHistory=output<void>();
-  dailyGoal = signal(20);
+  dailyGoal = input<number>();
   progressPercentage = computed(() => {
-    const percent = (this.stepCount() / this.dailyGoal()) * 100;
+    if(!this.dailyGoal()) return 0;
+    const percent = (this.stepCount() /this.dailyGoal()!) * 100;
     return Math.min(percent, 100);
   })
 }

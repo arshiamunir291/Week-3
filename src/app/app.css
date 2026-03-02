@@ -8,3 +8,15 @@
     border-radius: 15px;
     background-color: rgba(127, 255, 255, 0.301);
 }
+@media (max-width: 446px) {
+  .appContainer{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 447px) and (max-width: 767px) {
+  .appContainer{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

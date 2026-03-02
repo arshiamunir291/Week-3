@@ -34,3 +34,14 @@ p{
   font-size: 16px;
   font-weight: bold;
 }
+@media (max-width: 445px) {
+.progress-container{
+  width:70%
+}
+button{
+  font-size: 14px;
+}
+p{
+  font-size: 14px;
+}
+}

@@ -2,19 +2,21 @@
     <header>
         <p>Step Tracker</p>
     </header>
+    <div class="form-container">
+        <form [formGroup]="dailyGoalForm" (ngSubmit)="onsubmit()">
+            <input type="number" placeholder="Enter your daily goal" formControlName="dailyGoal">
+            <button type="submit" [disabled]="dailyGoalForm.invalid">Set Daily Goal</button>
+        </form>
+    </div>
     <div class="stepText">
         <p>{{ stepCounter()}} {{stepCounter() | stepInfo}}</p>
-        <p [stepHighlight]="stepCounter"></p>
+        <p [stepHighlight]="stepCounter" [dailyGoal]="dailyGoal"></p>
     </div>
 </div>
 <div class="childComponent">
-    <app-step-controls
-     [stepCount]="stepCounter()"
-     (increase)="increaseCounter()"
-     (decrease)="decreaseCounter()"
-     (reset)="resetCounter()" 
-     (showHistory)="toggleHistory()">
+    <app-step-controls [stepCount]="stepCounter()" [dailyGoal]="dailyGoal()" (increase)="increaseCounter()" (decrease)="decreaseCounter()"
+        (reset)="resetCounter()" (showHistory)="toggleHistory()">
     </app-step-controls>
 </div>
 
-<app-step-history *appToggle="showHistory()"   [stepHistorySignal]="stepHistory()"></app-step-history>
+<app-step-history *appToggle="showHistory()" [stepHistorySignal]="stepHistory()"></app-step-history>
