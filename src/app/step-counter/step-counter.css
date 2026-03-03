@@ -38,7 +38,7 @@ text-align: center;
 }
 
 .form-container input:focus {
-    background-color: rgba(127, 255, 212, 0.568); /* slightly different color when focused */
+ /* slightly different color when focused */
     outline: none; /* optional: remove default blue outline */
 }
 .form-container button{

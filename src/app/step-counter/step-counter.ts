@@ -28,10 +28,10 @@ export class StepCounter {
     if(!goal) return;
     if(step+1 >= goal){
       this.stepCounter.set(0);
+      this.dailyGoal.set(0);
     }else{
       this.stepCounter.set(step+1);
     }
-    this.stepCounter.update((c) => c + 1)
   }
   decreaseCounter() {
     this.stepCounter.update((c) => c > 0 ? c - 1 : 0);
